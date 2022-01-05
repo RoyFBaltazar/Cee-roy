@@ -56,7 +56,7 @@ diceSound.play()
          console.log("match 2 " + playerScore)
      }
      else if (side12 !== side1 && side12 !== side2){
-         console.log("roll Again")}
+         console.log("player roll Again")}
         //  alert("roll Again")}
     // console.log(playerScore)
 
@@ -76,16 +76,22 @@ diceSound.play()
                console.log("match 2 " + BankScore)
            }
            else if(side4 !== side5 && side4 !== side6){
-               console.log("roll again")
+               console.log("Bank roll again")
            }
-           
+           let playerTally=0;
+           let bankTally=0;
 if (playerScore > BankScore){
-    console.log("Player Wins")
+    
+   playerTally = playerTally + 1;
+   console.log("Player Wins " + playerTally)
 }
 if (BankScore > playerScore){
-    console.log("Bank wins")
+    bankTally= bankTally + 1;
+    console.log("Bank wins " + bankTally)
 }           
-      
+ if(BankScore === playerScore){
+     console.log("Tie")
+ }     
     
 }
 function resetfunction(){

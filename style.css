@@ -1,5 +1,5 @@
 *{
-    background-color: violet;
+    /* background-color: violet; */
 }
 @media screen 
   and (device-width: 360px) 
@@ -9,6 +9,9 @@
 }
 body {
     position: relative;
+    background-image: url( "images/bronx-staircase.jpg");
+    background-size: cover;
+
 }
 
 .wrapper {
@@ -61,6 +64,7 @@ body {
     text-transform: capitalize;
 }
 .resetButton {
+  animation: fade 5S ease forwards;
     position: absolute;
     top: 20rem;
 		left: 50%;
@@ -69,4 +73,13 @@ body {
     margin: 0;
 		text-align: center;
 
+}
+@keyframes fade{
+  from {opacity: 0;
+}
+to {opacity: 1;}}
+
+.gameName{
+  text-align: center;
+  
 }
