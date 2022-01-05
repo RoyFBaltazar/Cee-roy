@@ -50,25 +50,31 @@ body {
 .dice {
     width: 32px;
     float: left;
-    background-color: lightcoral;
-    border: 1px solid black;
+    background-color: rgb(212, 17, 17);
+    border: 3px solid black;
     padding: 10px;
     font-size: 24px;
     text-align: center;
     margin: 5px;
     border-radius: 5px;
+    color: rgb(3, 3, 63);
 }
 
 .dice-roll {
     cursor: pointer;
     text-transform: capitalize;
+    background-color: rgb(212, 17, 17);
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
 }
-.resetButton {
+.resetButton {  
   animation: fade 5S ease forwards;
     position: absolute;
     top: 20rem;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translateX(-30%);
     min-width: 100px;
     margin: 0;
 		text-align: center;
@@ -81,5 +87,6 @@ to {opacity: 1;}}
 
 .gameName{
   text-align: center;
+  text-shadow: 1px 1px 5px red;
   
 }

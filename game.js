@@ -27,23 +27,26 @@ diceSound.play()
         diceSide2.innerHTML = side2;
 
     status.innerHTML = 'You rolled ' + diceTotal + '.';
+    //Banks dice
     const diceSide4 = document.getElementById( 'dice-side-4' )
     const diceSide5 = document.getElementById( 'dice-side-5' );
     const diceSide6 = document.getElementById( 'dice-side-6' );
     const status2 = document.getElementById( 'status2' );
-    //computer roll     
+    //bank rolls     
     const side4 = Math.floor( Math.random() * 6 ) + 1;
     const side5 = Math.floor( Math.random() * 6 ) + 1;
     const side6 = Math.floor( Math.random() * 6 ) + 1;
     const diceTotal2 = side4 + side5 + side6;
-
+//updates dice on screen for bank
     diceSide4.innerHTML = side4;
     diceSide5.innerHTML = side5;
-        diceSide6.innerHTML = side6;
-        status2.innerHTML = ' Bank rolled ' + diceTotal2 + '.';
+    diceSide6.innerHTML = side6;
+    status2.innerHTML = ' Bank rolled ' + diceTotal2 + '.';
+    //game details if player get 3 of the same player wins
      if ( side1 === side2 && side1 === side12) {
     status.innerHTML += ' Tripple ! You won!';
      }
+     //filters and adds number to player score
      else if (side12 === side1 && side12 !== side2 ){
       playerScore= playerScore + side2;
       console.log("match 2 " + playerScore)
@@ -60,7 +63,7 @@ diceSound.play()
         //  alert("roll Again")}
     // console.log(playerScore)
 
-     //computer roll
+     //Bank roll outcomes
      if ( side4 === side5 && side4 === side6) {
         status2.innerHTML += 'tripple ! You get won!';
          }
@@ -78,8 +81,10 @@ diceSound.play()
            else if(side4 !== side5 && side4 !== side6){
                console.log("Bank roll again")
            }
+     //tallies game wins      
            let playerTally=0;
            let bankTally=0;
+    // game outcomes
 if (playerScore > BankScore){
     
    playerTally = playerTally + 1;
@@ -94,6 +99,7 @@ if (BankScore > playerScore){
  }     
     
 }
+// reset function add a message to dice
 function resetfunction(){
     document.getElementById('status').textContent = 'Roll Dice Again';
      document.getElementById( 'dice-side-4' ).textContent ='-';
@@ -104,7 +110,7 @@ function resetfunction(){
      document.getElementById( 'dice-side-2' ).textContent ='E';
      document.getElementById('status2').textContent = 'Bank Always Wins';
 }
-
+//two buttons
 buttonRoolDice.addEventListener( 'click', rollDice, false);
 buttonReset.addEventListener('click', resetfunction)
 }, false);
