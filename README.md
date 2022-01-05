@@ -28,6 +28,7 @@ then tally score if not an instant win or loss
 then computer will invoke function to roll
 
 score will be compare then winner will output on a prompt 
+added a prompt for bets everyround
 <!-- HTML !-->
 
 

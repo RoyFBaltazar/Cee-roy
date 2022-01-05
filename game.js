@@ -101,10 +101,7 @@ diceSound.play()
                console.log("Bank roll again")
                status2.innerHTML += " Roll again!"
            }
-    //  //tallies game wins      
-    //        let playerTally=0;
-    //        let bankTally=0;
-    // game outcomes
+    //Begins tally for every round
 if (playerScore > BankScore){
    playerTally = playerTally + 1;
    console.log("Player rounds won: " + playerTally)
@@ -121,7 +118,7 @@ if (BankScore > playerScore){
      console.log("Tie")
      gameOverSound.play()
  }   
- // tallies game   
+ // determines winner prompts winner and reset function   
  if (bankTally >= 3){
      alert("Game over, you lost " + totalMoneyBet + " Dollars")
      resetfunction()
