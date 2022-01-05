@@ -1,6 +1,12 @@
 *{
     background-color: violet;
 }
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
 body {
     position: relative;
 }
@@ -21,7 +27,7 @@ body {
 
 #status {
     position: absolute;
-    top: 10rem;
+    top: 15rem;
 		left: 50%;
 		transform: translateX(-50%);
     min-width: 400px;
@@ -30,7 +36,7 @@ body {
 }
 #status2 {
     position: absolute;
-    top: 13rem;
+    top: 17rem;
 		left: 50%;
 		transform: translateX(-50%);
     min-width: 400px;
@@ -53,4 +59,14 @@ body {
 .dice-roll {
     cursor: pointer;
     text-transform: capitalize;
+}
+.resetButton {
+    position: absolute;
+    top: 20rem;
+		left: 50%;
+		transform: translateX(-50%);
+    min-width: 100px;
+    margin: 0;
+		text-align: center;
+
 }
