@@ -2,7 +2,7 @@
 body {
     position: relative;
     background-image: url( "images/bronx-staircase.jpg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
     /* background-color: rgb(212, 17, 17);
     background-blend-mode:normal; */

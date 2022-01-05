@@ -58,7 +58,7 @@ diceSound.play()
      if ( side1 === side2 && side1 === side12) {
     status.innerHTML += ' Tripple ! You won!';
     winSound.play()
-    alert("You won")
+    alert("You won with side1 + side12 + side2")
     resetfunction()
      }
      //filters and adds number to player score
@@ -83,7 +83,7 @@ diceSound.play()
      if ( side4 === side5 && side4 === side6) {
         status2.innerHTML += 'Triple! Player Wins!';
         gameOverSound.play()
-        alert("You won")
+        alert("The Bank Won")
         resetfunction()
          }
          else if (side4 === side5 && side4 !== side6 ){
@@ -145,6 +145,8 @@ function resetfunction(){
      playerTally = 0;
      bankTally = 0;
      playerBet = 0;
+     totalMoneyBet = 0;
+     
 }
 //two buttons
 buttonRoolDice.addEventListener( 'click', rollDice, false);
