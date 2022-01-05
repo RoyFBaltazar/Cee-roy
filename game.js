@@ -14,10 +14,17 @@ window.addEventListener( 'DOMContentLoaded', function () {
     //tallies game wins      
     let playerTally=0;
     let bankTally=0;
-
+    let totalMoneyBet = 0;
 function rollDice () {
+    let  playerBet = prompt("how much do you want to bet?")
     let playerScore=[];
     let BankScore= [];
+    if(playerBet >0){
+        totalMoneyBet = totalMoneyBet + Number(playerBet)
+    }
+    else{
+        console.log("only cash")
+    }
     const diceSide12 = document.getElementById( 'dice-side-12' )
     const diceSide1 = document.getElementById( 'dice-side-1' );
     const diceSide2 = document.getElementById( 'dice-side-2' );
@@ -51,6 +58,8 @@ diceSound.play()
      if ( side1 === side2 && side1 === side12) {
     status.innerHTML += ' Tripple ! You won!';
     winSound.play()
+    alert("You won")
+    resetfunction()
      }
      //filters and adds number to player score
      else if (side12 === side1 && side12 !== side2 ){
@@ -74,6 +83,8 @@ diceSound.play()
      if ( side4 === side5 && side4 === side6) {
         status2.innerHTML += 'Triple! Player Wins!';
         gameOverSound.play()
+        alert("You won")
+        resetfunction()
          }
          else if (side4 === side5 && side4 !== side6 ){
             BankScore= BankScore + side6;
@@ -96,14 +107,14 @@ diceSound.play()
     // game outcomes
 if (playerScore > BankScore){
    playerTally = playerTally + 1;
-   console.log("Player Wins " + playerTally)
-   status.innerHTML += " Player Wins "
+   console.log("Player rounds won: " + playerTally)
+   status.innerHTML += " Player wins this round "
    winSound.play()
 }
 if (BankScore > playerScore){
     bankTally= bankTally + 1;
-    console.log("Bank wins " + bankTally)
-    status2.innerHTML += " Bank Wins"
+    console.log("Bank rounds won: " + bankTally)
+    status2.innerHTML += " Bank wins this round"
     gameOverSound.play()
 }           
  if(BankScore === playerScore){
@@ -112,11 +123,12 @@ if (BankScore > playerScore){
  }   
  // tallies game   
  if (bankTally >= 3){
-     alert("game over")
+     alert("Game over, you lost " + totalMoneyBet + " Dollars")
      resetfunction()
  }
     if (playerTally >= 3){
-        alert("You won")
+        let winningS= totalMoneyBet *=2;
+        alert("You won " + winningS + " Dollars")
         resetfunction()
     }
 }
@@ -132,6 +144,7 @@ function resetfunction(){
      document.getElementById('status2').textContent = 'Bank Always Wins';
      playerTally = 0;
      bankTally = 0;
+     playerBet = 0;
 }
 //two buttons
 buttonRoolDice.addEventListener( 'click', rollDice, false);
