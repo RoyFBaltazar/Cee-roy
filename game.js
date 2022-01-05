@@ -3,6 +3,7 @@
 //dice sound rings everytime you dice are rolled
 let diceSound = new Audio('images/rollDiceSound.mp3');
 let gameOverSound = new Audio('images/Game-over.wav')
+let winSound= new Audio('images/win-sound.wav')
 
 
 window.addEventListener( 'DOMContentLoaded', function () {
@@ -10,6 +11,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
    
     const buttonRoolDice = document.querySelector( '.dice-roll' );
     const buttonReset = document.querySelector('.resetButton')
+    //tallies game wins      
+    let playerTally=0;
+    let bankTally=0;
 
 function rollDice () {
     let playerScore=[];
@@ -46,6 +50,7 @@ diceSound.play()
     //game details if player get 3 of the same player wins
      if ( side1 === side2 && side1 === side12) {
     status.innerHTML += ' Tripple ! You won!';
+    winSound.play()
      }
      //filters and adds number to player score
      else if (side12 === side1 && side12 !== side2 ){
@@ -68,6 +73,7 @@ diceSound.play()
      //Bank roll outcomes
      if ( side4 === side5 && side4 === side6) {
         status2.innerHTML += 'Triple! Player Wins!';
+        gameOverSound.play()
          }
          else if (side4 === side5 && side4 !== side6 ){
             BankScore= BankScore + side6;
@@ -84,24 +90,35 @@ diceSound.play()
                console.log("Bank roll again")
                status2.innerHTML += " Roll again!"
            }
-     //tallies game wins      
-           let playerTally=0;
-           let bankTally=0;
+    //  //tallies game wins      
+    //        let playerTally=0;
+    //        let bankTally=0;
     // game outcomes
 if (playerScore > BankScore){
    playerTally = playerTally + 1;
    console.log("Player Wins " + playerTally)
    status.innerHTML += " Player Wins "
+   winSound.play()
 }
 if (BankScore > playerScore){
     bankTally= bankTally + 1;
     console.log("Bank wins " + bankTally)
     status2.innerHTML += " Bank Wins"
+    gameOverSound.play()
 }           
  if(BankScore === playerScore){
      console.log("Tie")
- }     
-    
+     gameOverSound.play()
+ }   
+ // tallies game   
+ if (bankTally >= 3){
+     alert("game over")
+     resetfunction()
+ }
+    if (playerTally >= 3){
+        alert("You won")
+        resetfunction()
+    }
 }
 // reset function add a message to dice
 function resetfunction(){
@@ -113,6 +130,8 @@ function resetfunction(){
      document.getElementById( 'dice-side-1' ).textContent ='E';
      document.getElementById( 'dice-side-2' ).textContent ='E';
      document.getElementById('status2').textContent = 'Bank Always Wins';
+     playerTally = 0;
+     bankTally = 0;
 }
 //two buttons
 buttonRoolDice.addEventListener( 'click', rollDice, false);

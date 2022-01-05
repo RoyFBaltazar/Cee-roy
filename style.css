@@ -1,6 +1,4 @@
-*{
-    /* background-color: violet; */
-}
+
 @media screen 
   and (device-width: 360px) 
   and (device-height: 640px) 
@@ -11,8 +9,8 @@ body {
     position: relative;
     background-image: url( "images/bronx-staircase.jpg");
     background-size: cover;
-    background-color: rgb(212, 17, 17);
-    background-blend-mode:normal;
+    /* background-color: rgb(212, 17, 17);
+    background-blend-mode:normal; */
 
 }
 
@@ -99,4 +97,5 @@ to {opacity: 1;}}
 }
 h2{
   font-family: Jazz LET, fantasy;
+  font-size: 30px;
  }
