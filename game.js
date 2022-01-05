@@ -1,7 +1,8 @@
 
 
-
+//dice sound rings everytime you dice are rolled
 let diceSound = new Audio('images/rollDiceSound.mp3');
+let gameOverSound = new Audio('images/Game-over.wav')
 
 
 window.addEventListener( 'DOMContentLoaded', function () {
@@ -59,13 +60,14 @@ diceSound.play()
          console.log("match 2 " + playerScore)
      }
      else if (side12 !== side1 && side12 !== side2){
-         console.log("player roll Again")}
+         console.log("player roll Again")
+        status.innerHTML += " Roll Again!"}
         //  alert("roll Again")}
     // console.log(playerScore)
 
      //Bank roll outcomes
      if ( side4 === side5 && side4 === side6) {
-        status2.innerHTML += 'tripple ! You get won!';
+        status2.innerHTML += 'Triple! Player Wins!';
          }
          else if (side4 === side5 && side4 !== side6 ){
             BankScore= BankScore + side6;
@@ -80,19 +82,21 @@ diceSound.play()
            }
            else if(side4 !== side5 && side4 !== side6){
                console.log("Bank roll again")
+               status2.innerHTML += " Roll again!"
            }
      //tallies game wins      
            let playerTally=0;
            let bankTally=0;
     // game outcomes
 if (playerScore > BankScore){
-    
    playerTally = playerTally + 1;
    console.log("Player Wins " + playerTally)
+   status.innerHTML += " Player Wins "
 }
 if (BankScore > playerScore){
     bankTally= bankTally + 1;
     console.log("Bank wins " + bankTally)
+    status2.innerHTML += " Bank Wins"
 }           
  if(BankScore === playerScore){
      console.log("Tie")
