@@ -32,7 +32,7 @@ body {
 }
 #status2 {
     position: absolute;
-    top: 17rem;
+    top: 20rem;
 		left: 50%;
 		transform: translateX(-50%);
     min-width: 400px;
@@ -63,9 +63,9 @@ body {
     font-weight: 600;
 }
 .resetButton {  
-  animation: fade 5S ease forwards;
+  animation: fade 2S ease forwards;
     position: absolute;
-    top: 20rem;
+    top: 25rem;
 		left: 50%;
 		transform: translateX(-30%);
     min-width: 100px;
@@ -102,6 +102,7 @@ and (-webkit-device-pixel-ratio: 3) {
     background-size: cover;
 background-repeat: no-repeat;
     position: sticky;
+    background-attachment: fixed;
   }
 
 }
