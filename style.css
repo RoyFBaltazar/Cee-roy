@@ -108,5 +108,8 @@ background-repeat: no-repeat;
   .dice-roll{
     padding: 15px;
   }
+  h2{
+    font-size: 12px
+  }
 
 }
