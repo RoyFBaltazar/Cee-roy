@@ -35,9 +35,9 @@ pushed to netlify
  fade in play again button
  DIFFICULTIES
  responsive design
- iphone desgin
+ iphone desgin - added media queries still needs works
 
 <!-- HTML !-->
-
+s
 
 

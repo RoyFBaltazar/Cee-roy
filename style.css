@@ -114,3 +114,23 @@ background-repeat: no-repeat;
   }
 
 }
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    body{
+      background-size: cover;
+  background-repeat: no-repeat;
+      position: sticky;
+      background-attachment: fixed;
+     
+    }
+    .dice-roll{
+      padding: 15px;
+    }
+    h2{
+      font-size: 15px
+    }
+  
+
+}
