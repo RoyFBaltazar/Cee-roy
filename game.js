@@ -22,8 +22,10 @@ function rollDice () {
     if(playerBet >0){
         totalMoneyBet = totalMoneyBet + Number(playerBet)
     }
-    else{
-        console.log("only cash")
+    //if player hits cancel alerts to the bet again
+    if (playerBet === null){
+        alert("Are you sure? Scared?")
+        return;
     }
     const diceSide12 = document.getElementById( 'dice-side-12' )
     const diceSide1 = document.getElementById( 'dice-side-1' );
