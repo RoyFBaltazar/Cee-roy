@@ -58,7 +58,7 @@ diceSound.play()
      if ( side1 === side2 && side1 === side12) {
     status.innerHTML += ' Tripple ! You won!';
     winSound.play()
-    alert("You won with side1 + side12 + side2")
+    alert(`You won with ${side1} + ${side12} + ${side2}`)
     resetfunction()
      }
      //filters and adds number to player score
@@ -74,8 +74,8 @@ diceSound.play()
          console.log("match 2 " + playerScore)
      }
      else if (side12 !== side1 && side12 !== side2){
-         console.log("player roll Again")
-        status.innerHTML += " Roll Again!"}
+         console.log("Player roll again")
+        status.innerHTML += " Roll again!"}
         //  alert("roll Again")}
     // console.log(playerScore)
 
