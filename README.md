@@ -33,6 +33,10 @@ added a prompt for bets everyround
 icon added to tab
 pushed to netlify
  fade in play again button
+ DIFFICULTIES
+ responsive design
+ iphone desgin
+
 <!-- HTML !-->
 
 
