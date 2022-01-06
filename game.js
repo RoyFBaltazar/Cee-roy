@@ -27,15 +27,18 @@ function rollDice () {
         alert("Are you sure? Scared?")
         return;
     }
+    //player dice
     const diceSide12 = document.getElementById( 'dice-side-12' )
     const diceSide1 = document.getElementById( 'dice-side-1' );
     const diceSide2 = document.getElementById( 'dice-side-2' );
     const status = document.getElementById( 'status' );
-         const side12 = Math.floor( Math.random() * 6 ) + 1;
+    //player rolls
+    const side12 = Math.floor( Math.random() * 6 ) + 1;
     const side1 = Math.floor( Math.random() * 6 ) + 1;
     const side2 = Math.floor( Math.random() * 6 ) + 1;
     const diceTotal = side1 + side2 + side12;
 diceSound.play()
+    //updates dice when roll
     diceSide12.innerHTML = side12;
     diceSide1.innerHTML = side1;
         diceSide2.innerHTML = side2;
@@ -122,7 +125,7 @@ if (BankScore > playerScore){
  }   
  // determines winner prompts winner and reset function   
  if (bankTally >= 3){
-     alert("Game over, you lost " + totalMoneyBet + " Dollars")
+     alert("Game over! You lost " + totalMoneyBet + " Dollars.")
      resetfunction()
  }
     if (playerTally >= 3){
