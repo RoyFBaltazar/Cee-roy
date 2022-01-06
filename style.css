@@ -3,6 +3,7 @@ body {
     position: relative;
     background-image: url( "images/bronx-staircase.jpg");
     background-size: cover;
+    background-attachment: fixed;
  
 
 }
