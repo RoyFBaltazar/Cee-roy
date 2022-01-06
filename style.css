@@ -99,7 +99,7 @@ and (device-width: 360px)
 and (device-height: 640px) 
 and (-webkit-device-pixel-ratio: 3) {
   body{
-    background-size: contain;
+    background-size: cover;
 background-repeat: no-repeat;
     position: sticky;
   }
