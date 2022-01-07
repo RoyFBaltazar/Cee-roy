@@ -39,6 +39,6 @@ pushed to netlify
  iphone desgin - added media queries still needs works
 
 <!-- HTML !-->
-s
+
 
 
