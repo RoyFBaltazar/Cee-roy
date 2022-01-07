@@ -97,7 +97,7 @@ to {opacity: 1;}}
 h2{
   /* font-family: Jazz LET, fantasy; */
   font-size: 30px;
-  text-shadow: 2px 2px 8px red;
+  text-shadow: 2px 2px 4px red;
  }
  
 @media screen 
@@ -109,6 +109,7 @@ and (-webkit-device-pixel-ratio: 3) {
 background-repeat: no-repeat;
     position: sticky;
     background-attachment: fixed;
+    overflow-x: hidden;
    
   }
   .dice-roll{
