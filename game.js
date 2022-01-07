@@ -1,9 +1,9 @@
 
 
 //dice sound rings everytime you dice are rolled
-let diceSound = new Audio('images/rollDiceSound.mp3');
-let gameOverSound = new Audio('images/Game-over.wav')
-let winSound= new Audio('images/win-sound.wav')
+let diceSound = new Audio('audio/rollDiceSound.mp3');
+let gameOverSound = new Audio('audio/Game-over.wav')
+let winSound= new Audio('audio/win-sound.wav')
 
 
 window.addEventListener( 'DOMContentLoaded', function () {
