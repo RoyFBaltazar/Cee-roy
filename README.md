@@ -30,13 +30,17 @@ then computer will invoke function to roll
 score will be compare then winner will output on a prompt 
 added a prompt for bets everyround
 Approach Taken
+first added dice 
+then added functions
 
 icon added to tab
 pushed to netlify
  fade in play again button
  Unsolved Problems
  responsive design
- iphone desgin - added media queries still needs works
+ iphone desgin - added media queries still needs works.
+
+
 Netlify link
 https://frosty-poincare-1c2cbb.netlify.app/
 <!-- HTML !-->
