@@ -28,11 +28,18 @@ then tally score if not an instant win or loss
 then computer will invoke function to roll
 
 resources used:
+
+https://www.w3schools.com/js/default.asp
+
+
 https://codepen.io/gearmobile/pen/mEJwYw
 
 https://www.findsounds.com/ISAPI/search.dll?keywords=dice
 
 https://www.favicon.cc/?action=icon_list&tag_id=385
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
 
 score will be compare then winner will output on a prompt 
 added a prompt for bets everyround
