@@ -37,7 +37,8 @@ pushed to netlify
  Unsolved Problems
  responsive design
  iphone desgin - added media queries still needs works
-
+Netlify link
+https://frosty-poincare-1c2cbb.netlify.app/
 <!-- HTML !-->
 
 
