@@ -27,11 +27,21 @@ from 1-6
 then tally score if not an instant win or loss
 then computer will invoke function to roll
 
+resources used:
+https://codepen.io/gearmobile/pen/mEJwYw
+
+https://www.findsounds.com/ISAPI/search.dll?keywords=dice
+
+https://www.favicon.cc/?action=icon_list&tag_id=385
+
 score will be compare then winner will output on a prompt 
 added a prompt for bets everyround
+
 Approach Taken
 first added dice 
 then added functions
+added css features 
+
 
 icon added to tab
 pushed to netlify
